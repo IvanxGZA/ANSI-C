@@ -1,10 +1,8 @@
 #include <stdio.h>
 
-/* copy input to output; 3rd version*/
 int main()
 {
-  int c;
-  
-  c = getchar();
-  printf("EOF = %d\n", c == EOF);/*if a is equal to EOF the printf will show 1*/
+  printf("(getchar() != 0) is: %d\n", getchar() != EOF);
 }
+/*if getchar() is different to EOF, printf will show 1, and if the two
+  are equal, printf will show 0*/
