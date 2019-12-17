@@ -1,0 +1,15 @@
+
+#include <stdio.h>
+
+/* copy input to output; 1st version*/
+int main()
+{
+  int c, a;
+  a = -1;
+  
+  while ((c = getchar()) != EOF)
+    putchar(c);
+  printf("EOF = %d\n", a == EOF);/*if a is equal to EOF the printf will show 1*/
+}
+/*The definition of EOF is from a C standar (C library files), where
+  it's defined as an implementation of a specific negative integer*/
