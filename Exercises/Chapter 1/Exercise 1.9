@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+  int c,last;
+  last = 's'; /*it's not important wich characther you choose*/
+
+  while ((c = getchar()) != EOF)
+    {
+      if (c == ' ')
+	{
+	if (last != ' ')
+	  putchar(c);
+	} 
+      else
+        putchar(c);
+      last = c;
+    }
+}
