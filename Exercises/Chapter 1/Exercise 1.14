@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+#define MIN 33
+#define MAX 126
+
+//Exercise 1.14 Kernighan's Book
+
+int main()
+{
+
+  int c, i, j;
+  int freq[MAX];
+
+  for (i = MIN; i <= MAX; ++i)
+    freq[i] = 0;
+
+  while ((c = getchar ()) != EOF)
+    if ( c >= MIN && c <= MAX)
+      ++freq[c];
+    else
+      c = 0;
+
+  printf("ASCII table\n|Value in ASCII talbe|Symbol|Repetitions|Histogram|\n\n");
+
+  for (i = MIN; i <= MAX; ++i){
+    printf("|%3d|%c|%2d|", i, i, freq[i]);
+    for (j = 1; j <= freq[i]; ++j){
+      putchar('*');
+    }
+    putchar('\n');
+  }
+}
