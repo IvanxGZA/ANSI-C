@@ -22,7 +22,7 @@ int main()
       copy(longest, line);
     }
   if (max > 0)  //there was a line
-    printf("Length of the longest: %d, Line: %s\n", max, longest);
+    printf("Length of the longest line: %d, Line: %s\n", max, longest);
   return 0;
 }
 
