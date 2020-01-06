@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+#define LOWER 0
+#define UPPER 300
+#define STEP 20
+
+//Exerxise 1.15 from Section 1.3 Kernighan's Book
+
+int convertion(int f)
+{
+  int celsius;
+
+  celsius = (5.0 / 9.0) * (f - 32);
+  return celsius;
+}
+
+int main()
+{
+  int fahr;
+
+  for (fahr = LOWER; fahr <= UPPER; fahr = fahr + STEP)
+    printf ("%3d %6.1d\n", fahr, convertion(fahr));
+  return 0;
+}
