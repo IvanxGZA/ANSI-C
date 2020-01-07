@@ -1,0 +1,37 @@
+//Exercise 1.17 Kernighan's Book
+//Just took the example from Kernighan's book in page 29
+
+
+#include <stdio.h>
+#define MAXLINE 1000
+#define MIN 80//is to print lines longer than 80
+
+int ggetline(char line[], int maxline);
+
+//print lines longer than 80
+
+int main()
+{
+  int len = 0;
+  char line[MAXLINE];
+
+  while ((len = ggetline(line, MAXLINE)) > 0)
+    if (len > MIN){
+      printf("Line = %s\n", line);
+    }
+  return 0;
+}
+
+int ggetline(char s[], int lim)
+{
+  int c, i;
+
+  for (i = 0; i < lim-1 && (c = getchar()) != EOF && c != '\n' && i < lim; ++i)
+    s[i] = c;
+  if (c == '\n'){
+    s[i] = c;
+    ++i;
+  }
+  s[i] = '\0';
+  return i;
+}
