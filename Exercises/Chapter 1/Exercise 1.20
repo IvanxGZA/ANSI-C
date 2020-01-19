@@ -18,6 +18,5 @@ int main()
 	  n = TABS;
 	}
     }
-  printf("Columns at last line = %d\n", n); \\Number of spaces
   return 0;
 }
