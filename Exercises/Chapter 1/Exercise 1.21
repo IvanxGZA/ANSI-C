@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+#define TABS 4
+
+int main()
+{
+  int c, n;
+
+  while((c = getchar()) != EOF)
+    {
+      if (c == ' '){
+        for (n = TABS; n != 0; --n){
+	  putchar('\t');
+	}
+      }
+	else{
+	  putchar(c);
+	  n = TABS;
+	}
+    }
+  return 0;
+}
