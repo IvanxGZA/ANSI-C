@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+#define TABS 4
+
+int main()
+{
+  int c, n;
+
+  while((c = getchar()) != EOF)
+    {
+      if (c == '\t'){
+        for (n = TABS; n != 0; --n){
+	  putchar(' ');
+	}
+      }
+	else{
+	  putchar(c);
+	  n = TABS;
+	}
+    }
+  printf("Columns at last line = %d\n", n); \\Number of spaces
+  return 0;
+}
